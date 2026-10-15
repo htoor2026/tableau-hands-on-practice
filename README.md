@@ -1,48 +1,56 @@
-# Tableau Hands-On Practice | Superstore Sales & Profitability
+# Superstore Sales & Profitability — Tableau Hands-On Practice
 
-![Tableau](https://img.shields.io/badge/Tableau-Hands--on%20Practice-E97627?logo=tableau&logoColor=white)
-![Dataset](https://img.shields.io/badge/Dataset-Sample%20Superstore-2563EB)
-![Focus](https://img.shields.io/badge/Focus-Business%20Intelligence%20%26%20Data%20Visualization-475569)
+[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/harkamal.toor)
+![Focus](https://img.shields.io/badge/Focus-BI%20%26%20Data%20Visualization-2563EB)
+![Dataset](https://img.shields.io/badge/Data-Sample%20Superstore-64748B)
+![Status](https://img.shields.io/badge/Status-Published-16A34A)
 
-A practical learning exercise exploring **retail sales, profit, geographic performance, and cumulative revenue** in Tableau. The goal was to learn Tableau by building real worksheets and an interactive dashboard—not to present a copied example as an original client project.
+**Explore retail sales, category profitability, US state-level profit, and cumulative revenue using Tableau.**
 
-**Tools:** Tableau Public/Desktop · Calculated Fields · Table Calculations · Geographic Maps · Dashboard Filters
+This repository documents a **hands-on Tableau learning exercise** using the Sample Superstore dataset. It covers the complete beginner workflow: connecting a CSV, building charts, writing calculated fields, using table calculations, and assembling an interactive dashboard.
 
-## Business questions
+**Built with:** Tableau Public · Calculated Fields · Table Calculations · Geographic Maps · Filters & Dashboard Layout
 
-- Which product categories generate the most sales and the most profit?
-- Why can a high-revenue category have a low profit margin?
-- How does each category contribute to total revenue?
-- Which US states are profitable or loss-making?
-- How does cumulative sales revenue change over time?
+## Live Tableau views
 
-## What I built
+| View | What you can explore |
+| --- | --- |
+| **[Open the Sales & Profit Dashboard ↗](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/SuperstoreSalesProfit)** | Compare category sales, profit, margins and state-level results |
+| **[Open Cumulative Sales ↗](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/CumulativeSales)** | Running total of sales across years |
+| **[Open Sales Contribution ↗](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/SalesContribution)** | Each category's share of total revenue |
 
-| Analysis | Tableau technique | Workbook |
-| --- | --- | --- |
-| Sales by Category | Horizontal bar chart, aggregation and sorting | [Main packaged workbook](./Superstore_Tableau_Practice.twbx) |
-| Profit by Category | Comparison of category profitability | [Main packaged workbook](./Superstore_Tableau_Practice.twbx) |
-| Profit Margin by Category | Calculated field, percentage formatting | [Main packaged workbook](./Superstore_Tableau_Practice.twbx) |
-| Profit by State | Filled geographic map colored by profit | [Main packaged workbook](./Superstore_Tableau_Practice.twbx) |
-| Sales Contribution % | **Percent of Total** table calculation | [Sales Contribution workbook](./Sales%20Contribution.twbx) |
-| Cumulative Sales | **Running Total** table calculation with a line chart | [Cumulative Sales workbook](./Cumulative%20Sales.twbx) |
-| Sales & Profit Dashboard | Combined views and dashboard filters | [Main packaged workbook](./Superstore_Tableau_Practice.twbx) |
+These are three **views in the published Tableau Public workbook**. The images below are static previews; use the links above for the published Tableau experience.
 
-The main workbook contains the combined Tableau practice; the two other packaged workbooks preserve individual calculation exercises.
+### Dashboard preview
 
-## Results at a glance
+[![Superstore sales and profit dashboard](./assets/dashboard.png)](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/SuperstoreSalesProfit)
 
-Results shown here use the full Sample Superstore dataset (without region, year or category restrictions).
+### Additional visualizations
 
-| Metric | Result |
+| Cumulative sales | Sales contribution |
+| --- | --- |
+| [![Cumulative sales line chart](./assets/cumulative-sales.png)](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/CumulativeSales) | [![Sales contribution chart](./assets/sales-contribution.png)](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/SalesContribution) |
+| [Explore the live view ↗](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/CumulativeSales) | [Explore the live view ↗](https://public.tableau.com/app/profile/harkamal.toor/viz/CumulativeSales_17920806063360/SalesContribution) |
+
+## Questions I explored
+
+1. Which product categories drive the most **sales** and **profit**?
+2. Can a category generate high revenue but have a low **profit margin**?
+3. What **percentage of total sales** does each category contribute?
+4. Which US states show **positive or negative profit**?
+5. How does **cumulative revenue** change across years?
+
+## Key results
+
+These figures refer to the **unfiltered** Sample Superstore data in this repository. Selections in Tableau can change displayed numbers.
+
+| Summary metric | Value |
 | --- | ---: |
 | Total sales | **$2,297,201** |
 | Total profit | **$286,397** |
 | Overall profit margin | **12.5%** |
-| Highest sales and profit category | **Technology** |
-| Lowest-margin category | **Furniture** |
-
-### Category comparison
+| Data size | **9,994 line items** |
+| Period | **2015–2018** |
 
 | Category | Sales | Profit | Profit margin | Share of sales |
 | --- | ---: | ---: | ---: | ---: |
@@ -50,53 +58,76 @@ Results shown here use the full Sample Superstore dataset (without region, year 
 | Furniture | $742,000 | $18,451 | 2.5% | 32.3% |
 | Office Supplies | $719,047 | $122,491 | 17.0% | 31.3% |
 
-**Interpretation:** Furniture accounts for nearly a third of revenue yet contributes relatively little profit. Revenue alone is not a sufficient measure of business performance. The dashboard highlights where a deeper investigation of product mix, costs and discounting would be valuable; it does **not** establish causal effects.
+**Takeaway:** Furniture produces more revenue than Office Supplies, yet contributes substantially less profit. Looking at sales alone would obscure this difference. This is a descriptive finding, not evidence that any particular factor *caused* lower margins.
 
-## Screenshots and interactivity
+## Skills practiced
 
-- **Screenshots:** Visual previews can be added under `assets/` (for example, `dashboard.png`, `cumulative-sales.png`, and `sales-contribution.png`).
-- **Workbook interaction:** Open the packaged Tableau workbook and use the Region, Category, Year and other available filters to explore results.
-- **Browser interaction:** A public, clickable dashboard requires publishing the workbook to **[Tableau Public](https://public.tableau.com/)**. A live URL can be added here after publication. GitHub image previews are static.
+| Topic | Tableau work |
+| --- | --- |
+| Data connection | Imported CSV; inspected dates, measures, dimensions and geographic fields |
+| Visual comparisons | Sales, profit and margin by category |
+| Calculated fields | Profit margin as an aggregated ratio |
+| Geospatial analysis | Filled map of profit by US state |
+| Interactive analysis | Region, Category and Year filters; dashboard exploration |
+| Table calculations | Percent of Total and Running Total |
+| Dashboard design | Combined four analysis views into one Tableau dashboard |
 
-## How to open the workbooks
+### Core formulas
 
-1. Install [Tableau Public](https://www.tableau.com/products/public) or use Tableau Desktop.
-2. Download `Superstore_Tableau_Practice.twbx` from this repository.
-3. Open the `.twbx` file in Tableau. A packaged workbook includes the data and supporting files needed by the workbook.
-4. Explore the worksheets and dashboard. Open the two separate `.twbx` files for the table-calculation exercises.
-
-To **rebuild from the CSV** rather than opening the finished workbook, connect to `data/superstore.csv` once that file has been added to this repository. Verify date, numeric and geographic field roles after importing.
-
-### Core calculated fields
-
-**Profit Margin %** — aggregated profit divided by aggregated sales:
+**Profit Margin %** — aggregated ratio (format as percentage):
 
 ```tableau
 SUM([Profit]) / SUM([Sales])
 ```
 
-**Cumulative Sales** — computed along the year axis:
-
-```tableau
-RUNNING_SUM(SUM([Sales]))
-```
-
-**Sales Contribution %** — computed across categories:
+**Sales Contribution %** — compute across categories:
 
 ```tableau
 SUM([Sales]) / TOTAL(SUM([Sales]))
 ```
 
-For the last two calculations, set the correct **Compute Using** direction in Tableau; a table calculation can return misleading values if its addressing/partitioning is incorrect.
+**Cumulative Sales** — compute along the ordered year axis:
 
-## Dataset and attribution
+```tableau
+RUNNING_SUM(SUM([Sales]))
+```
 
-- **Dataset:** Sample Superstore (US retail orders; 9,994 line items, 2015–2018 in this version).
-- **Practice reference:** [ANAPBORGES/tableau-sales-profitability-dashboard](https://github.com/ANAPBORGES/tableau-sales-profitability-dashboard), which includes a copy of the sample CSV, design references and Tableau calculations.
-- **Credit:** Original repository by Ana Paula Borges. This repository documents my own hands-on learning and adaptations, and is not presented as an independent original case study.
+For table calculations, **Compute Using** matters: choose the correct direction and partition so percentages and running totals are calculated over the intended records.
 
-If redistributing the CSV, retain its source attribution and confirm that its distribution terms permit republication. If unsure, keep a download link to the source instead of committing a copy.
+## Repository contents
 
----
+```text
+.
+├── README.md
+├── Superstore_Tableau_Practice.twbx
+├── Sales Contribution.twbx
+├── Cumulative Sales.twbx
+├── data/
+│   └── superstore.csv
+└── assets/
+    ├── dashboard.png
+    ├── cumulative-sales.png
+    └── sales-contribution.png
+```
 
-**Purpose:** Foundational Tableau practice in business reporting and visualization. For additional work, see my [GitHub profile](https://github.com/htoor2026).
+- **[Main Tableau workbook](./Superstore_Tableau_Practice.twbx)** — practice worksheets and the combined dashboard.
+- **[Sales Contribution workbook](./Sales%20Contribution.twbx)** — percent-of-total exercise.
+- **[Cumulative Sales workbook](./Cumulative%20Sales.twbx)** — running-total exercise.
+- **[Source CSV](./data/superstore.csv)** — dataset for rebuilding the visuals.
+- **[Screenshots](./assets/)** — visual previews.
+
+### Reproduce the exercise
+
+1. Install [Tableau Public](https://www.tableau.com/products/public) or use Tableau Desktop.
+2. Download and open the [packaged workbook](./Superstore_Tableau_Practice.twbx) to explore the work.
+3. Alternatively, connect Tableau to [`data/superstore.csv`](./data/superstore.csv) and build new worksheets from scratch.
+4. Verify date types, numerical fields and the `State` geographic role; set the country context to the **United States** if states show as unknown.
+5. Try rebuilding a category bar chart, profit-margin calculation, map, filters and a running-total line chart.
+
+## Acknowledgment and scope
+
+- **Dataset:** Sample Superstore, used for learning and demonstration.
+- **Learning reference and original example:** [Ana Paula Borges — tableau-sales-profitability-dashboard](https://github.com/ANAPBORGES/tableau-sales-profitability-dashboard). Her repository includes the CSV, workbook examples, calculations and design guidance.
+- **This repository:** A record of my hands-on Tableau practice and published visualizations. It is not represented as an original commercial project or independently collected data.
+
+**Author:** [Harkamal Toor](https://github.com/htoor2026) · [Tableau Public profile](https://public.tableau.com/app/profile/harkamal.toor)
