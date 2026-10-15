@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Local editor and Tableau temporary files
+*.swp
+*.swo
+*.tmp
+*.bak
+*~
